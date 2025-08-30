@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: app-ingress
   annotations:
-    kubernetes.io/ingress.class: "traefik"
+    spec.ingressClassName: "traefik"
 spec:
   rules:
   - host: app1.com
