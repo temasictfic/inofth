@@ -1,1 +1,4 @@
 .vagrant/
+vagrant
+token
+sc.sh
