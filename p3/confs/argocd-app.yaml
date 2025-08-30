@@ -6,7 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/sciftci-iot/config
+    # IMPORTANT: Update this to YOUR GitHub repository
+    # Example: https://github.com/fyurtsev/config
+    repoURL: https://github.com/temasictfic/iot-config
     targetRevision: HEAD
     path: .
   destination:
@@ -16,3 +18,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
