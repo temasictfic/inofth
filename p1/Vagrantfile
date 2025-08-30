@@ -2,24 +2,24 @@ Vagrant.configure("2") do |config|
 
   config.vm.synced_folder ".", "/vagrant"
 
-  config.vm.define "sciftciS" do |server|
+  config.vm.define "fyurtsevS" do |server|
     server.vm.box = "generic/alpine319"
-    server.vm.hostname = "sciftciS"
+    server.vm.hostname = "fyurtsevS"
     server.vm.network "private_network", ip: "192.168.56.110"
     server.vm.provider "virtualbox" do |v|
-      v.name = "sciftciS"
+      v.name = "fyurtsevS"
       v.memory = 1024
       v.cpus = 1
     end
     server.vm.provision "shell", path: "scripts/server.sh"
   end
   
-  config.vm.define "sciftciSW" do |worker|
+  config.vm.define "fyurtsevSW" do |worker|
     worker.vm.box = "generic/alpine319"
-    worker.vm.hostname = "sciftciSW"
+    worker.vm.hostname = "fyurtsevSW"
     worker.vm.network "private_network", ip: "192.168.56.111"
     worker.vm.provider "virtualbox" do |v|
-      v.name = "sciftciSW"
+      v.name = "fyurtsevSW"
       v.memory = 1024
       v.cpus = 1
     end
